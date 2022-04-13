@@ -1,0 +1,285 @@
+:root {
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    --Color-Primary: hsl(0, 0%, 98%);
+    --Color-Secondary: hsl(236, 33%, 92%);
+    --Color-Font-2: hsl(235, 15%, 95%);
+    --Color-Font: hsl(236, 9%, 61%);
+    --Color-Bg: hsl(235, 15%, 95%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+    --Color-Link: hsl(228, 45%, 44%);
+    --Hero-Mobile: url(../images/bg-mobile-light.jpg);
+    --Hero-Desktop: url(../images/bg-desktop-light.jpg);
+    --Theme-Icon: url(../images/icon-moon.svg);
+}
+
+/* GLOBALS */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.supra-body {
+    background-color: var(--Color-Bg);
+}
+
+body {
+    font-size: 18px;
+}
+
+.container {
+    min-height: 98vh;
+    max-height: 100%;
+}
+
+/* HEADER */
+.header-hero {
+    background-image: var(--Hero-Mobile);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+}
+
+@media (min-width: 768px) {
+    .header-hero {
+        background-image: var(--Hero-Desktop);
+        background-position: center;
+        height: 220px;
+    }
+}
+
+.header {
+    padding: 40px 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header .title {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 26px;
+    color: var(--Color-Font-2);
+}
+
+/* CARDS */
+.card {
+    padding: 10px 20px;
+    background-color: var(--Color-Primary);
+    margin: 0 25px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+
+    .card,
+    .header {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+
+.card .done {
+    text-decoration: line-through;
+}
+
+.card-create {
+    border-radius: 7px;
+    display: flex;
+}
+
+.card-create input {
+    border: none;
+    background-color: transparent;
+    width: 80%;
+    margin-right: 15%;
+    margin-top: 2px;
+    color: var(--Color-Font);
+}
+
+.card-create .form-create {
+    display: flex;
+    width: 100%;
+}
+
+.form-create .create-task {
+    text-align: right;
+    margin-bottom: -20px;
+}
+
+.card-create .create-task-btn {
+    padding: 11px;
+    margin-top: 5px;
+    border-radius: 900px;
+    border: 2px solid var(--Color-Secondary);
+    background-color: var(--Color-Primary);
+}
+
+.card-create .create-task-btn:hover {
+    background-color: var(--Color-Font);
+}
+
+.card .data-task {
+    display: flex;
+    align-items: center;
+}
+
+.data-task p {
+    font-size: 13px;
+    margin-top: 2px;
+    color: var(--Color-Font);
+}
+
+.data-task .complete-task-btn {
+    padding: 5px;
+    border-radius: 900px;
+    border: 2px solid var(--Color-Secondary);
+    background-color: var(--Color-Primary);
+    margin-right: 10px;
+}
+
+.card .complete-task-img,
+.card .delete-task-img {
+    padding: 6px;
+    background-image: url(../images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+input[type=submit] {
+    visibility: hidden;
+}
+
+.card .complete-task-btn,
+.card .delete-task-img,
+.card-create .create-task-btn {
+    cursor: pointer;
+}
+
+.delete .delete-task-img {
+    background-image: url(../images/icon-cross.svg);
+}
+
+.card .active {
+    background: rgb(87, 221, 255);
+    background: radial-gradient(circle, rgba(87, 221, 255, 1) 0%, rgba(192, 88, 243, 1) 84%);
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--Dark-Grayish-Blue);
+    padding: 5px 0;
+}
+
+.actions .clear-completed {
+    text-decoration: none;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.actions .clear-completed:hover {
+    color: var(--Bright-Blue);
+}
+
+/* INPUT */
+.input {
+    margin-bottom: 20px;
+}
+
+/* LIST */
+.list {
+    margin-bottom: 20px;
+}
+
+.list .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.list .task:first-of-type {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.list .task:last-of-type {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+/* FILTERS */
+.last-card {
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.filters-bar {
+    padding: 5px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters-bar a {
+    text-decoration: none;
+    color: var(--Dark-Grayish-Blue);
+    font-size: 14px;
+}
+
+.selected {
+    color: var(--Bright-Blue);
+}
+
+/* INSTRUCTIONS */
+.instructions {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: var(--Dark-Grayish-Blue);
+}
+
+/* FOOTER */
+.footer {
+    height: 2vh;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--Color-Font);
+}
+
+.attribution a {
+    color: var(--Color-Link);
+}
+
+#theme {
+    background: var(--Theme-Icon);
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+    --Color-Secondary-2: hsl(235, 21%, 11%);
+    --Color-Primary: hsl(235, 24%, 19%);
+    --Color-Font: hsl(234, 39%, 85%);
+    --Color-Secondary: hsl(236, 33%, 92%);
+    /* HOVER */
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Color-Bg: hsl(237, 14%, 26%);
+    --Color-Link: hsl(228, 53%, 66%);
+    --Hero-Mobile: url(../images/bg-mobile-dark.jpg);
+    --Hero-Desktop: url(../images/bg-desktop-dark.jpg);
+    --Theme-Icon: url(../images/icon-sun.svg);
+}
