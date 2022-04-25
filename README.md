@@ -13,10 +13,10 @@ Aplicativo web  extremadamente sencillo e intuitivo que te permite apuntar rápi
 - **Bonificación**: Arrastrar y soltar para reordenar elementos en la lista
 
 
-###Imagen del Aplicativo en Web
+### Imagen del Aplicativo en Web
 
 ![desktop-design-dark](https://user-images.githubusercontent.com/50665777/165139490-3436b11f-431e-4d7a-a106-32acb0fe9e6c.jpg)
 
-###Imagen del Aplicativo en Movil
+### Imagen del Aplicativo en Movil
 
 ![mobile-design-dark](https://user-images.githubusercontent.com/50665777/165137899-ea1cfda3-719c-4f72-95c1-f05842c361a9.jpg)
